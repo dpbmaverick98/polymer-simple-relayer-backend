@@ -1,0 +1,168 @@
+{
+  // ========================================
+  // CHAINS CONFIGURATION
+  // ========================================
+  // Define all blockchain networks your relayer will interact with
+  // Add new chains here when expanding to new networks
+  "chains": {
+    "ethereum": {
+      "chainId": 1,                           // Official chain ID for network identification
+      "rpc": "https://eth-mainnet.alchemyapi.io/v2/YOUR_KEY", // RPC endpoint - use reliable providers like Alchemy, Infura
+      "privateKey": "0x0000000000000000000000000000000000000000000000000000000000000001", // Private key for signing transactions (KEEP SECURE!)
+      "pollingInterval": 5000,                // How often to check for new events (milliseconds)
+      "blockConfirmations": 12,               // Wait for N confirmations before processing (finality protection)
+      "gasMultiplier": 1.2                    // Multiply estimated gas by this factor (1.2 = 20% buffer)
+    },
+    "polygon": {
+      "chainId": 137,
+      "rpc": "https://polygon-rpc.com",       // Free public RPC (consider paid for production)
+      "privateKey": "0x0000000000000000000000000000000000000000000000000000000000000002", // Different key per chain for security
+      "pollingInterval": 2000,                // Polygon is faster, poll more frequently
+      "blockConfirmations": 10,               // Polygon needs fewer confirmations
+      "gasMultiplier": 1.1
+    },
+    "arbitrum": {
+      "chainId": 42161,
+      "rpc": "https://arb1.arbitrum.io/rpc",
+      "privateKey": "0x0000000000000000000000000000000000000000000000000000000000000003", // Separate key for Arbitrum
+      "pollingInterval": 1000,                // L2s are very fast
+      "blockConfirmations": 1,                // L2s have faster finality
+      "gasMultiplier": 1.0                    // L2s have predictable gas
+    }
+  },
+  
+  // ========================================
+  // CONTRACT DEPLOYMENTS
+  // ========================================
+  // Map your smart contracts across all chains
+  // Structure: "ContractName" -> "chainName" -> deployment details
+  "contracts": {
+    "TokenBridge": {                          // Your contract name (can be anything descriptive)
+      "ethereum": {
+        "address": "0x123...",                // Contract address on this chain
+        "type": "source",                     // "source" = emits events, "destination" = receives calls, "both" = does both
+        "abi": "./abis/TokenBridge.json"      // Path to ABI file (relative to config file)
+      },
+      "polygon": {
+        "address": "0x456...",
+        "type": "destination",                // This contract only receives cross-chain calls
+        "abi": "./abis/TokenBridge.json"      // Same ABI if contracts are identical
+      },
+      "arbitrum": {
+        "address": "0x789...",
+        "type": "destination",
+        "abi": "./abis/TokenBridge.json"
+      }
+    },
+    "MessageBridge": {                        // Example of bidirectional bridge
+      "ethereum": {
+        "address": "0xabc...",
+        "type": "both",                       // Can send AND receive messages
+        "abi": "./abis/MessageBridge.json"
+      },
+      "polygon": {
+        "address": "0xdef...",
+        "type": "both",                       // Bidirectional messaging
+        "abi": "./abis/MessageBridge.json"
+      }
+    }
+  },
+
+  // ========================================
+  // EVENT TO METHOD MAPPINGS
+  // ========================================
+  // Define which source events trigger which destination method calls
+  // This is the core logic of your relayer
+  "eventMappings": [
+    {
+      "name": "TokenLock",                    // Descriptive name for this mapping
+      "sourceEvent": {
+        "contractName": "TokenBridge",        // Must match a key from "contracts" section
+        "eventName": "TokenLocked",           // Exact event name from your contract
+        "eventSignature": "TokenLocked(address user, uint256 amount, uint256 destinationChainId, bytes32 messageId)"
+        // ↑ Full event signature for parsing (get this from your contract ABI)
+      },
+      "destinationCall": {
+        "contractName": "TokenBridge",        // Which contract to call on destination
+        "methodName": "releaseTokens",        // Method name to call
+        "methodSignature": "releaseTokens(address user, uint256 amount, bytes32 messageId, bytes proof)"
+        // ↑ Method signature for encoding parameters
+      },
+      "destinationResolver": "chainIdFromEvent",  // How to determine destination chain(s) - see resolvers section
+      "proofRequired": true,                 // Whether this action needs cryptographic proof
+      "enabled": true                        // Easy way to disable mappings without deleting
+    },
+    {
+      "name": "MessageSent",
+      "sourceEvent": {
+        "contractName": "MessageBridge",
+        "eventName": "MessageSent",
+        "eventSignature": "MessageSent(bytes32 messageId, address sender, string targetChain, bytes data)"
+      },
+      "destinationCall": {
+        "contractName": "MessageBridge",
+        "methodName": "executeMessage",
+        "methodSignature": "executeMessage(bytes32 messageId, address sender, bytes data, bytes proof)"
+      },
+      "destinationResolver": "chainNameFromEvent",  // Different resolver strategy
+      "proofRequired": true,
+      "enabled": true
+    }
+  ],
+
+  // ========================================
+  // DESTINATION RESOLVERS
+  // ========================================
+  // Define how to determine which chain(s) to send transactions to
+  // Different strategies for different use cases
+  "destinationResolvers": {
+    // STRATEGY 1: Extract chain ID from event parameter and map to chain name
+    "chainIdFromEvent": {
+      "type": "eventParameter",              // Look at an event parameter
+      "parameterName": "destinationChainId", // Which parameter contains the chain info
+      "mapping": {                           // Map chain IDs to internal chain names
+        "1": "ethereum",                     // Chain ID 1 = ethereum
+        "137": "polygon",                    // Chain ID 137 = polygon
+        "42161": "arbitrum"                  // Chain ID 42161 = arbitrum
+      }
+    },
+    
+    // STRATEGY 2: Extract chain name directly from event parameter
+    "chainNameFromEvent": {
+      "type": "eventParameter",
+      "parameterName": "targetChain"         // Event already contains chain name (e.g., "polygon")
+      // No mapping needed - use parameter value directly
+    },
+    
+    // STRATEGY 3: Always send to the same destination(s)
+    "staticMapping": {
+      "type": "static",
+      "destinations": ["polygon", "arbitrum"] // Always send to these chains
+    },
+    
+    // STRATEGY 4: Custom logic (implement in code)
+    "customTokenLogic": {
+      "type": "custom",
+      "customFunction": "complexTokenBridge"  // Points to ./resolvers/complexTokenBridge.ts
+    }
+  },
+
+  // ========================================
+  // PROOF API CONFIGURATION  
+  // ========================================
+  // Configure your proof generation service
+  // This generates cryptographic proofs for cross-chain verification
+  "proofApi": {
+    "baseUrl": "https://proof-api.example.com",  // Your proof service endpoint
+    "timeout": 30000,                        // Request timeout in milliseconds
+    "retryAttempts": 3                       // How many times to retry failed requests
+  },
+
+  // ========================================
+  // DATABASE CONFIGURATION
+  // ========================================
+  // SQLite database for tracking jobs and state
+  "database": {
+    "path": "./relayer.db"                   // Database file path (will be created if doesn't exist)
+  }
+}

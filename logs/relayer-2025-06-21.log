@@ -1,0 +1,1259 @@
+[2025-06-21T09:41:01.038Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T09:41:01.039Z] INFO: Initializing database schema
+[2025-06-21T09:41:01.042Z] INFO: Database initialized successfully
+[2025-06-21T09:41:01.042Z] INFO: Setting up destination resolver
+[2025-06-21T09:41:01.042Z] INFO: Setting up executor services
+[2025-06-21T09:41:01.062Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T09:41:01.063Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T09:41:01.063Z] INFO: Validating configuration...
+[2025-06-21T09:41:01.063Z] INFO: ✅ Configuration validation passed
+[2025-06-21T09:41:01.063Z] INFO: Setting up chain listeners
+[2025-06-21T09:41:01.063Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T09:41:01.065Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T09:41:01.065Z] INFO: Starting Relayer services...
+[2025-06-21T09:41:01.065Z] INFO: Starting job queue processing
+[2025-06-21T09:41:01.065Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T09:41:01.066Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T09:41:02.170Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T09:41:02.171Z] INFO: === Configuration Summary ===
+[2025-06-21T09:41:02.171Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T09:41:02.171Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T09:41:02.171Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T09:41:02.171Z] INFO: === End Configuration Summary ===
+[2025-06-21T09:41:02.171Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T09:46:02.171Z] INFO: 
+=== Relayer Metrics ===
+events_processed_arbitrumSepolia_ValueSet: 0
+blocks_processed_arbitrumSepolia: 30300
+polling_arbitrumSepolia: 300 (avg: 577.13ms)
+events_processed_baseSepolia_ValueSet: 0
+blocks_processed_baseSepolia: 15150
+polling_baseSepolia: 150 (avg: 472.51ms)
+[2025-06-21T09:46:02.172Z] INFO: Queue Stats {"queueLength":0,"isProcessing":true,"jobsByStatus":{},"jobsByMapping":{}}
+[2025-06-21T09:46:02.173Z] INFO: Database Stats {}
+[2025-06-21T09:46:34.020Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T09:46:34.020Z] INFO: Stopping Relayer...
+[2025-06-21T09:46:34.020Z] INFO: Stopping job queue processing
+[2025-06-21T09:46:34.020Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T09:46:34.020Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T09:46:34.021Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T09:47:09.424Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T09:47:09.425Z] INFO: Initializing database schema
+[2025-06-21T09:47:09.426Z] INFO: Database initialized successfully
+[2025-06-21T09:47:09.426Z] INFO: Setting up destination resolver
+[2025-06-21T09:47:09.426Z] INFO: Setting up executor services
+[2025-06-21T09:47:09.444Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T09:47:09.444Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T09:47:09.444Z] INFO: Validating configuration...
+[2025-06-21T09:47:09.445Z] INFO: ✅ Configuration validation passed
+[2025-06-21T09:47:09.445Z] INFO: Setting up chain listeners
+[2025-06-21T09:47:09.445Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T09:47:09.446Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T09:47:09.446Z] INFO: Starting Relayer services...
+[2025-06-21T09:47:09.446Z] INFO: Starting job queue processing
+[2025-06-21T09:47:09.446Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T09:47:09.447Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T09:47:09.683Z] INFO: Initialized baseSepolia starting from current block {"currentBlock":27365470,"startBlock":27365469,"confirmations":1}
+[2025-06-21T09:47:10.186Z] INFO: Initialized arbitrumSepolia starting from current block {"currentBlock":165707902,"startBlock":165707901,"confirmations":1}
+[2025-06-21T09:47:10.725Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T09:47:10.725Z] INFO: === Configuration Summary ===
+[2025-06-21T09:47:10.725Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T09:47:10.725Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T09:47:10.725Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T09:47:10.725Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T09:47:10.725Z] INFO: === End Configuration Summary ===
+[2025-06-21T09:49:54.220Z] INFO: Created job for ValueSetCrossChain event {"jobId":1,"uniqueId":"baseSepolia-0x361fe2b111c6316593f564f238e76e20248246812e1945e5133cb7de7e62b4f5-61-arbitrumSepolia","txHash":"0x361fe2b111c6316593f564f238e76e20248246812e1945e5133cb7de7e62b4f5","destChain":"arbitrumSepolia","destContract":"0x324670730736B72A3EA73067F30c54F03B23934E"}
+[2025-06-21T09:49:54.576Z] INFO: Requesting proof for job 1 {"txHash":"0x361fe2b111c6316593f564f238e76e20248246812e1945e5133cb7de7e62b4f5","chain":"baseSepolia","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:49:54.579Z] INFO: Requesting proof from Polymer {"txHash":"0x361fe2b111c6316593f564f238e76e20248246812e1945e5133cb7de7e62b4f5","chain":"baseSepolia","blockNumber":27365551,"eventIndex":61}
+[2025-06-21T09:49:55.293Z] INFO: Proof job requested successfully {"jobId":400538,"attempt":1,"params":{"srcChainId":84532,"srcBlockNumber":27365551,"globalLogIndex":61}}
+[2025-06-21T09:49:55.293Z] INFO: Polling for proof completion {"jobId":400538}
+[2025-06-21T09:49:55.593Z] WARN: Proof polling attempt 1 failed {"jobId":400538,"error":"Polymer API error: invalid argument 0: json: cannot unmarshal string into Go value of type types.JobID (code: -32602)","attempt":1}
+[2025-06-21T09:49:57.912Z] WARN: Proof polling attempt 2 failed {"jobId":400538,"error":"Polymer API error: invalid argument 0: json: cannot unmarshal string into Go value of type types.JobID (code: -32602)","attempt":2}
+[2025-06-21T09:50:00.220Z] WARN: Proof polling attempt 3 failed {"jobId":400538,"error":"Polymer API error: invalid argument 0: json: cannot unmarshal string into Go value of type types.JobID (code: -32602)","attempt":3}
+[2025-06-21T09:50:02.524Z] WARN: Proof polling attempt 4 failed {"jobId":400538,"error":"Polymer API error: invalid argument 0: json: cannot unmarshal string into Go value of type types.JobID (code: -32602)","attempt":4}
+[2025-06-21T09:50:04.880Z] WARN: Proof polling attempt 5 failed {"jobId":400538,"error":"Polymer API error: invalid argument 0: json: cannot unmarshal string into Go value of type types.JobID (code: -32602)","attempt":5}
+[2025-06-21T09:50:07.178Z] WARN: Proof polling attempt 6 failed {"jobId":400538,"error":"Polymer API error: invalid argument 0: json: cannot unmarshal string into Go value of type types.JobID (code: -32602)","attempt":6}
+[2025-06-21T09:50:09.505Z] WARN: Proof polling attempt 7 failed {"jobId":400538,"error":"Polymer API error: invalid argument 0: json: cannot unmarshal string into Go value of type types.JobID (code: -32602)","attempt":7}
+[2025-06-21T09:50:10.391Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T09:50:10.391Z] INFO: Stopping Relayer...
+[2025-06-21T09:50:10.391Z] INFO: Stopping job queue processing
+[2025-06-21T09:50:10.392Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T09:50:10.392Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T09:50:10.392Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T09:52:20.900Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T09:52:20.902Z] INFO: Initializing database schema
+[2025-06-21T09:52:20.902Z] INFO: Database initialized successfully
+[2025-06-21T09:52:20.902Z] INFO: Setting up destination resolver
+[2025-06-21T09:52:20.902Z] INFO: Setting up executor services
+[2025-06-21T09:52:20.923Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T09:52:20.923Z] INFO: Loaded 1 pending jobs from database
+[2025-06-21T09:52:20.923Z] INFO: Validating configuration...
+[2025-06-21T09:52:20.924Z] INFO: ✅ Configuration validation passed
+[2025-06-21T09:52:20.924Z] INFO: Setting up chain listeners
+[2025-06-21T09:52:20.924Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T09:52:20.925Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T09:52:20.925Z] INFO: Starting Relayer services...
+[2025-06-21T09:52:20.925Z] INFO: Starting job queue processing
+[2025-06-21T09:52:20.925Z] WARN: No processor found for job status: proof_requested {"jobId":1,"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:20.926Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T09:52:20.926Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T09:52:21.544Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T09:52:21.544Z] INFO: === Configuration Summary ===
+[2025-06-21T09:52:21.544Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T09:52:21.544Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T09:52:21.544Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T09:52:21.545Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T09:52:21.545Z] INFO: === End Configuration Summary ===
+[2025-06-21T09:52:35.895Z] INFO: Created job for ValueSetCrossChain event {"jobId":2,"uniqueId":"baseSepolia-0x0a98e21f16fe74fff101866cc82356cdf1de2366226739d6652852cce3d196ba-139-arbitrumSepolia","txHash":"0x0a98e21f16fe74fff101866cc82356cdf1de2366226739d6652852cce3d196ba","destChain":"arbitrumSepolia","destContract":"0x324670730736B72A3EA73067F30c54F03B23934E"}
+[2025-06-21T09:52:36.014Z] INFO: Requesting proof for job 2 {"txHash":"0x0a98e21f16fe74fff101866cc82356cdf1de2366226739d6652852cce3d196ba","chain":"baseSepolia","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:36.015Z] INFO: Requesting proof from Polymer {"txHash":"0x0a98e21f16fe74fff101866cc82356cdf1de2366226739d6652852cce3d196ba","chain":"baseSepolia","blockNumber":27365632,"eventIndex":139}
+[2025-06-21T09:52:36.473Z] INFO: Proof job requested successfully {"jobId":400539,"attempt":1,"params":{"srcChainId":84532,"srcBlockNumber":27365632,"globalLogIndex":139}}
+[2025-06-21T09:52:36.474Z] INFO: Polling for proof completion {"jobId":400539}
+[2025-06-21T09:52:36.798Z] WARN: Proof polling attempt 1 failed {"jobId":400539,"error":"Unknown proof status: initialized","attempt":1}
+[2025-06-21T09:52:41.423Z] INFO: Proof completed successfully {"jobId":400539,"attempt":3,"proofLength":2742}
+[2025-06-21T09:52:41.423Z] INFO: Proof obtained successfully from Polymer {"jobId":400539,"blockNumber":27365632,"proofLength":2742}
+[2025-06-21T09:52:41.426Z] INFO: Proof obtained for job 2 {"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:42.017Z] INFO: Executing transaction for job 2 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:42.018Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T09:52:42.020Z] ERROR: Error processing job 2 {"error":"Key not found in event data","jobId":2,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:42.020Z] ERROR: Job 2 failed {"error":"Key not found in event data","retryCount":0,"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:43.018Z] INFO: Retrying job 2 {"attempt":1,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:44.017Z] INFO: Executing transaction for job 2 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:44.021Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T09:52:44.022Z] ERROR: Error processing job 2 {"error":"Key not found in event data","jobId":2,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:44.022Z] ERROR: Job 2 failed {"error":"Key not found in event data","retryCount":1,"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:45.018Z] INFO: Retrying job 2 {"attempt":2,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:46.019Z] INFO: Executing transaction for job 2 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:46.022Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T09:52:46.023Z] ERROR: Error processing job 2 {"error":"Key not found in event data","jobId":2,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:46.024Z] ERROR: Job 2 failed {"error":"Key not found in event data","retryCount":2,"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:47.020Z] INFO: Retrying job 2 {"attempt":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:48.021Z] INFO: Executing transaction for job 2 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:48.025Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T09:52:48.026Z] ERROR: Error processing job 2 {"error":"Key not found in event data","jobId":2,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:48.026Z] ERROR: Job 2 failed {"error":"Key not found in event data","retryCount":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:49.022Z] ERROR: Job 2 exceeded max retries, giving up {"retryCount":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T09:52:50.582Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T09:52:50.582Z] INFO: Stopping job queue processing
+[2025-06-21T09:52:50.582Z] INFO: Stopping Relayer...
+[2025-06-21T09:52:50.582Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T09:52:50.583Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T09:52:50.583Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T14:23:49.419Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T14:23:49.421Z] INFO: Initializing database schema
+[2025-06-21T14:23:49.421Z] INFO: Database initialized successfully
+[2025-06-21T14:23:49.421Z] INFO: Setting up destination resolver
+[2025-06-21T14:23:49.421Z] INFO: Setting up executor services
+[2025-06-21T14:23:49.441Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T14:23:49.441Z] INFO: Loaded 1 pending jobs from database
+[2025-06-21T14:23:49.441Z] INFO: Validating configuration...
+[2025-06-21T14:23:49.441Z] INFO: ✅ Configuration validation passed
+[2025-06-21T14:23:49.441Z] INFO: Setting up chain listeners
+[2025-06-21T14:23:49.441Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T14:23:49.443Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T14:23:49.443Z] INFO: Starting Relayer services...
+[2025-06-21T14:23:49.443Z] INFO: Starting job queue processing
+[2025-06-21T14:23:49.443Z] WARN: No processor found for job status: proof_requested {"jobId":1,"mapping":"ValueSetCrossChain"}
+[2025-06-21T14:23:49.444Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T14:23:49.444Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T14:23:50.068Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T14:23:50.068Z] INFO: === Configuration Summary ===
+[2025-06-21T14:23:50.069Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T14:23:50.069Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T14:23:50.069Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T14:23:50.069Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T14:23:50.069Z] INFO: === End Configuration Summary ===
+[2025-06-21T14:24:08.452Z] INFO: Created job for ValueSetCrossChain event {"jobId":3,"uniqueId":"baseSepolia-0x84ab6a1c3840b2c36a003d480b9fa9224252b46d24a28490d700282935cdc58b-220-arbitrumSepolia","txHash":"0x84ab6a1c3840b2c36a003d480b9fa9224252b46d24a28490d700282935cdc58b","destChain":"arbitrumSepolia","destContract":"0x324670730736B72A3EA73067F30c54F03B23934E"}
+[2025-06-21T14:24:08.460Z] INFO: Requesting proof for job 3 {"txHash":"0x84ab6a1c3840b2c36a003d480b9fa9224252b46d24a28490d700282935cdc58b","chain":"baseSepolia","mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:08.462Z] INFO: Requesting proof from Polymer {"txHash":"0x84ab6a1c3840b2c36a003d480b9fa9224252b46d24a28490d700282935cdc58b","chain":"baseSepolia","blockNumber":27366621,"eventIndex":220}
+[2025-06-21T14:24:08.903Z] INFO: Proof job requested successfully {"jobId":400559,"attempt":1,"params":{"srcChainId":84532,"srcBlockNumber":27366621,"globalLogIndex":220}}
+[2025-06-21T14:24:08.904Z] INFO: Polling for proof completion {"jobId":400559}
+[2025-06-21T14:24:09.241Z] INFO: Proof completed successfully {"jobId":400559,"attempt":1,"proofLength":2742}
+[2025-06-21T14:24:09.242Z] INFO: Proof obtained successfully from Polymer {"jobId":400559,"blockNumber":27366621,"proofLength":2742}
+[2025-06-21T14:24:09.245Z] INFO: Proof obtained for job 3 {"mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:09.462Z] INFO: Executing transaction for job 3 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:09.465Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T14:24:09.468Z] ERROR: Error processing job 3 {"error":"Key not found in event data","jobId":3,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:09.468Z] ERROR: Job 3 failed {"error":"Key not found in event data","retryCount":0,"mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:10.462Z] INFO: Retrying job 3 {"attempt":1,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:11.462Z] INFO: Executing transaction for job 3 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:11.463Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T14:24:11.464Z] ERROR: Error processing job 3 {"error":"Key not found in event data","jobId":3,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:11.464Z] ERROR: Job 3 failed {"error":"Key not found in event data","retryCount":1,"mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:12.464Z] INFO: Retrying job 3 {"attempt":2,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:13.464Z] INFO: Executing transaction for job 3 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:13.465Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T14:24:13.466Z] ERROR: Error processing job 3 {"error":"Key not found in event data","jobId":3,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:13.466Z] ERROR: Job 3 failed {"error":"Key not found in event data","retryCount":2,"mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:14.447Z] INFO: Created job for ValueSetCrossChain event {"jobId":4,"uniqueId":"baseSepolia-0x590df07e6d3bd8a6571f50a47bc1983cc05af01232c7378b6aa6f234221ea954-66-arbitrumSepolia","txHash":"0x590df07e6d3bd8a6571f50a47bc1983cc05af01232c7378b6aa6f234221ea954","destChain":"arbitrumSepolia","destContract":"0x324670730736B72A3EA73067F30c54F03B23934E"}
+[2025-06-21T14:24:14.465Z] INFO: Retrying job 3 {"attempt":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:14.467Z] INFO: Requesting proof for job 4 {"txHash":"0x590df07e6d3bd8a6571f50a47bc1983cc05af01232c7378b6aa6f234221ea954","chain":"baseSepolia","mapping":"ValueSetCrossChain"}
+[2025-06-21T14:24:14.467Z] INFO: Requesting proof from Polymer {"txHash":"0x590df07e6d3bd8a6571f50a47bc1983cc05af01232c7378b6aa6f234221ea954","chain":"baseSepolia","blockNumber":27366909,"eventIndex":66}
+[2025-06-21T14:24:14.748Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T14:24:14.748Z] INFO: Stopping Relayer...
+[2025-06-21T14:24:14.749Z] INFO: Stopping job queue processing
+[2025-06-21T14:24:14.749Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T14:24:14.749Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T14:24:14.750Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T17:19:47.551Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T17:19:47.553Z] INFO: Initializing database schema
+[2025-06-21T17:19:47.553Z] INFO: Database initialized successfully
+[2025-06-21T17:19:47.553Z] INFO: Setting up destination resolver
+[2025-06-21T17:19:47.553Z] INFO: Setting up executor services
+[2025-06-21T17:19:47.574Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T17:19:47.574Z] INFO: Loaded 3 pending jobs from database
+[2025-06-21T17:19:47.574Z] INFO: Validating configuration...
+[2025-06-21T17:19:47.574Z] INFO: ✅ Configuration validation passed
+[2025-06-21T17:19:47.574Z] INFO: Setting up chain listeners
+[2025-06-21T17:19:47.575Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T17:19:47.576Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T17:19:47.576Z] INFO: Starting Relayer services...
+[2025-06-21T17:19:47.576Z] INFO: Starting job queue processing
+[2025-06-21T17:19:47.577Z] WARN: No processor found for job status: proof_requested {"jobId":1,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:19:47.577Z] INFO: Executing transaction for job 3 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:19:47.577Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:19:47.578Z] WARN: No processor found for job status: proof_requested {"jobId":4,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:19:47.578Z] ERROR: Error processing job 3 {"error":"Key not found in event data","jobId":3,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:19:47.578Z] ERROR: Job 3 failed {"error":"Key not found in event data","retryCount":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:19:47.579Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:19:47.580Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:19:48.248Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T17:19:48.249Z] INFO: === Configuration Summary ===
+[2025-06-21T17:19:48.249Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T17:19:48.249Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T17:19:48.249Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:19:48.249Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T17:19:48.249Z] INFO: === End Configuration Summary ===
+[2025-06-21T17:19:48.581Z] ERROR: Job 3 exceeded max retries, giving up {"retryCount":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:20:49.126Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T17:20:49.127Z] INFO: Stopping job queue processing
+[2025-06-21T17:20:49.127Z] INFO: Stopping Relayer...
+[2025-06-21T17:20:49.127Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T17:20:49.127Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T17:20:49.127Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T17:22:11.711Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T17:22:11.713Z] INFO: Initializing database schema
+[2025-06-21T17:22:11.715Z] INFO: Database initialized successfully
+[2025-06-21T17:22:11.715Z] INFO: Setting up destination resolver
+[2025-06-21T17:22:11.716Z] INFO: Setting up executor services
+[2025-06-21T17:22:11.736Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T17:22:11.737Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T17:22:11.737Z] INFO: Validating configuration...
+[2025-06-21T17:22:11.737Z] INFO: ✅ Configuration validation passed
+[2025-06-21T17:22:11.737Z] INFO: Setting up chain listeners
+[2025-06-21T17:22:11.737Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T17:22:11.738Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T17:22:11.739Z] INFO: Starting Relayer services...
+[2025-06-21T17:22:11.739Z] INFO: Starting job queue processing
+[2025-06-21T17:22:11.739Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:22:11.740Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:22:11.968Z] INFO: Initialized baseSepolia starting from current block {"currentBlock":27379121,"startBlock":27379120,"confirmations":1}
+[2025-06-21T17:22:12.142Z] INFO: Initialized arbitrumSepolia starting from current block {"currentBlock":165805067,"startBlock":165805066,"confirmations":1}
+[2025-06-21T17:22:12.682Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T17:22:12.682Z] INFO: === Configuration Summary ===
+[2025-06-21T17:22:12.682Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T17:22:12.682Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T17:22:12.682Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:22:12.682Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T17:22:12.682Z] INFO: === End Configuration Summary ===
+[2025-06-21T17:22:55.845Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T17:22:55.847Z] INFO: Initializing database schema
+[2025-06-21T17:22:55.847Z] INFO: Database initialized successfully
+[2025-06-21T17:22:55.847Z] INFO: Setting up destination resolver
+[2025-06-21T17:22:55.847Z] INFO: Setting up executor services
+[2025-06-21T17:22:55.867Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T17:22:55.868Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T17:22:55.868Z] INFO: Validating configuration...
+[2025-06-21T17:22:55.868Z] INFO: ✅ Configuration validation passed
+[2025-06-21T17:22:55.868Z] INFO: Setting up chain listeners
+[2025-06-21T17:22:55.868Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T17:22:55.869Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T17:22:55.869Z] INFO: Starting Relayer services...
+[2025-06-21T17:22:55.869Z] INFO: Starting job queue processing
+[2025-06-21T17:22:55.870Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:22:55.870Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:22:56.490Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T17:22:56.490Z] INFO: === Configuration Summary ===
+[2025-06-21T17:22:56.490Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T17:22:56.490Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T17:22:56.490Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:22:56.490Z] INFO: === End Configuration Summary ===
+[2025-06-21T17:22:56.490Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T17:22:58.840Z] INFO: Created job for ValueSetCrossChain event {"jobId":1,"uniqueId":"baseSepolia-0x3db7c1e797f36ca96c8a905de9c5e31de26a1cda17e6c5416b41b54bcf29579f-73-arbitrumSepolia","txHash":"0x3db7c1e797f36ca96c8a905de9c5e31de26a1cda17e6c5416b41b54bcf29579f","destChain":"arbitrumSepolia","destContract":"0x324670730736B72A3EA73067F30c54F03B23934E"}
+[2025-06-21T17:22:58.873Z] INFO: Requesting proof for job 1 {"txHash":"0x3db7c1e797f36ca96c8a905de9c5e31de26a1cda17e6c5416b41b54bcf29579f","chain":"baseSepolia","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:22:59.299Z] INFO: Requesting proof from Polymer {"txHash":"0x3db7c1e797f36ca96c8a905de9c5e31de26a1cda17e6c5416b41b54bcf29579f","chain":"baseSepolia","blockNumber":27379143,"eventIndex":73}
+[2025-06-21T17:22:59.823Z] INFO: Proof job requested successfully {"jobId":400973,"attempt":1,"params":{"srcChainId":84532,"srcBlockNumber":27379143,"globalLogIndex":73}}
+[2025-06-21T17:22:59.823Z] INFO: Polling for proof completion {"jobId":400973}
+[2025-06-21T17:23:00.132Z] WARN: Proof polling attempt 1 failed {"jobId":400973,"error":"Unknown proof status: initialized","attempt":1}
+[2025-06-21T17:23:04.753Z] INFO: Proof completed successfully {"jobId":400973,"attempt":3,"proofLength":2656}
+[2025-06-21T17:23:04.753Z] INFO: Proof obtained successfully from Polymer {"jobId":400973,"blockNumber":27379143,"proofLength":2656}
+[2025-06-21T17:23:04.754Z] INFO: Proof obtained for job 1 {"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:04.879Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:04.880Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:23:04.881Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:04.881Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":0,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:05.880Z] INFO: Retrying job 1 {"attempt":1,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:06.879Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:06.880Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:23:06.880Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:06.880Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":1,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:07.880Z] INFO: Retrying job 1 {"attempt":2,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:08.881Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:08.883Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:23:08.883Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:08.883Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":2,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:09.882Z] INFO: Retrying job 1 {"attempt":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:10.883Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:10.884Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:23:10.885Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:10.885Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:11.884Z] ERROR: Job 1 exceeded max retries, giving up {"retryCount":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:23:15.643Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T17:23:15.644Z] INFO: Stopping Relayer...
+[2025-06-21T17:23:15.644Z] INFO: Stopping job queue processing
+[2025-06-21T17:23:15.645Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T17:23:15.645Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T17:23:15.646Z] INFO: 🗑️  Database cleared for fresh restart
+[2025-06-21T17:23:15.646Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T17:23:17.342Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T17:23:17.344Z] INFO: Initializing database schema
+[2025-06-21T17:23:17.347Z] INFO: Database initialized successfully
+[2025-06-21T17:23:17.347Z] INFO: Setting up destination resolver
+[2025-06-21T17:23:17.347Z] INFO: Setting up executor services
+[2025-06-21T17:23:17.366Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T17:23:17.367Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T17:23:17.367Z] INFO: Validating configuration...
+[2025-06-21T17:23:17.367Z] INFO: ✅ Configuration validation passed
+[2025-06-21T17:23:17.367Z] INFO: Setting up chain listeners
+[2025-06-21T17:23:17.367Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T17:23:17.368Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T17:23:17.368Z] INFO: Starting Relayer services...
+[2025-06-21T17:23:17.368Z] INFO: Starting job queue processing
+[2025-06-21T17:23:17.369Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:23:17.369Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:23:17.579Z] INFO: Initialized baseSepolia starting from current block {"currentBlock":27379154,"startBlock":27379153,"confirmations":1}
+[2025-06-21T17:23:17.715Z] INFO: Initialized arbitrumSepolia starting from current block {"currentBlock":165805323,"startBlock":165805322,"confirmations":1}
+[2025-06-21T17:23:18.262Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T17:23:18.263Z] INFO: === Configuration Summary ===
+[2025-06-21T17:23:18.263Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T17:23:18.263Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T17:23:18.264Z] INFO: === End Configuration Summary ===
+[2025-06-21T17:23:18.264Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T17:23:18.264Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:23:19.228Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T17:23:19.229Z] INFO: Stopping Relayer...
+[2025-06-21T17:23:19.229Z] INFO: Stopping job queue processing
+[2025-06-21T17:23:19.229Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T17:23:19.229Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T17:23:19.230Z] INFO: 🗑️  Database cleared for fresh restart
+[2025-06-21T17:23:19.230Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T17:26:29.376Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T17:26:29.378Z] INFO: Initializing database schema
+[2025-06-21T17:26:29.381Z] INFO: Database initialized successfully
+[2025-06-21T17:26:29.381Z] INFO: Setting up destination resolver
+[2025-06-21T17:26:29.381Z] INFO: Setting up executor services
+[2025-06-21T17:26:29.402Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T17:26:29.403Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T17:26:29.403Z] INFO: Validating configuration...
+[2025-06-21T17:26:29.403Z] INFO: ✅ Configuration validation passed
+[2025-06-21T17:26:29.403Z] INFO: Setting up chain listeners
+[2025-06-21T17:26:29.403Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T17:26:29.405Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T17:26:29.405Z] INFO: Starting Relayer services...
+[2025-06-21T17:26:29.405Z] INFO: Starting job queue processing
+[2025-06-21T17:26:29.405Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:26:29.406Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:26:29.649Z] INFO: Initialized baseSepolia starting from current block {"currentBlock":27379250,"startBlock":27379249,"confirmations":1}
+[2025-06-21T17:26:29.820Z] INFO: Initialized arbitrumSepolia starting from current block {"currentBlock":165806083,"startBlock":165806082,"confirmations":1}
+[2025-06-21T17:26:30.488Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T17:26:30.489Z] INFO: === Configuration Summary ===
+[2025-06-21T17:26:30.490Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T17:26:30.489Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T17:26:30.490Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T17:26:30.490Z] INFO: === End Configuration Summary ===
+[2025-06-21T17:26:30.490Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:26:48.248Z] INFO: Created job for ValueSetCrossChain event {"jobId":1,"uniqueId":"baseSepolia-0x193b5f644b84e0514428b1abd11fb0a4f70be747d9a83d113d288a27e614dd1b-199-arbitrumSepolia","txHash":"0x193b5f644b84e0514428b1abd11fb0a4f70be747d9a83d113d288a27e614dd1b","destChain":"arbitrumSepolia","destContract":"0x324670730736B72A3EA73067F30c54F03B23934E"}
+[2025-06-21T17:26:48.424Z] INFO: Requesting proof for job 1 {"txHash":"0x193b5f644b84e0514428b1abd11fb0a4f70be747d9a83d113d288a27e614dd1b","chain":"baseSepolia","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:48.864Z] INFO: Requesting proof from Polymer {"txHash":"0x193b5f644b84e0514428b1abd11fb0a4f70be747d9a83d113d288a27e614dd1b","chain":"baseSepolia","blockNumber":27379258,"eventIndex":199}
+[2025-06-21T17:26:49.280Z] INFO: Proof job requested successfully {"jobId":400974,"attempt":1,"params":{"srcChainId":84532,"srcBlockNumber":27379258,"globalLogIndex":199}}
+[2025-06-21T17:26:49.281Z] INFO: Polling for proof completion {"jobId":400974}
+[2025-06-21T17:26:54.967Z] INFO: Proof completed successfully {"jobId":400974,"attempt":5,"proofLength":2656}
+[2025-06-21T17:26:54.967Z] INFO: Proof obtained successfully from Polymer {"jobId":400974,"blockNumber":27379258,"proofLength":2656}
+[2025-06-21T17:26:54.970Z] INFO: Proof obtained for job 1 {"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:55.428Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:55.432Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:26:55.439Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:55.439Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":0,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:56.429Z] INFO: Retrying job 1 {"attempt":1,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:57.428Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:57.431Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:26:57.433Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:57.433Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":1,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:58.429Z] INFO: Retrying job 1 {"attempt":2,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:59.429Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:59.430Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:26:59.430Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:26:59.430Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":2,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:27:00.431Z] INFO: Retrying job 1 {"attempt":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:27:01.432Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:27:01.433Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:27:01.433Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:27:01.433Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:27:02.432Z] ERROR: Job 1 exceeded max retries, giving up {"retryCount":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:27:10.951Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T17:27:10.952Z] INFO: Stopping Relayer...
+[2025-06-21T17:27:10.952Z] INFO: Stopping job queue processing
+[2025-06-21T17:27:10.953Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T17:27:10.953Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T17:27:10.955Z] INFO: 🗑️  Database cleared for fresh restart
+[2025-06-21T17:27:10.955Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T17:28:37.524Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T17:28:37.527Z] INFO: Initializing database schema
+[2025-06-21T17:28:37.529Z] INFO: Database initialized successfully
+[2025-06-21T17:28:37.529Z] INFO: Setting up destination resolver
+[2025-06-21T17:28:37.529Z] INFO: Setting up executor services
+[2025-06-21T17:28:37.551Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T17:28:37.551Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T17:28:37.551Z] INFO: Validating configuration...
+[2025-06-21T17:28:37.551Z] INFO: ✅ Configuration validation passed
+[2025-06-21T17:28:37.551Z] INFO: Setting up chain listeners
+[2025-06-21T17:28:37.551Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T17:28:37.553Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T17:28:37.553Z] INFO: Starting Relayer services...
+[2025-06-21T17:28:37.553Z] INFO: Starting job queue processing
+[2025-06-21T17:28:37.553Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:28:37.554Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:28:37.843Z] INFO: Initialized baseSepolia starting from current block {"currentBlock":27379314,"startBlock":27379313,"confirmations":1}
+[2025-06-21T17:28:37.970Z] INFO: Initialized arbitrumSepolia starting from current block {"currentBlock":165806593,"startBlock":165806592,"confirmations":1}
+[2025-06-21T17:28:38.541Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T17:28:38.541Z] INFO: === Configuration Summary ===
+[2025-06-21T17:28:38.541Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T17:28:38.542Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T17:28:38.542Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:28:38.542Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T17:28:38.542Z] INFO: === End Configuration Summary ===
+[2025-06-21T17:28:52.384Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T17:28:52.385Z] INFO: Stopping Relayer...
+[2025-06-21T17:28:52.385Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T17:28:52.385Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T17:28:52.385Z] INFO: Stopping job queue processing
+[2025-06-21T17:28:52.386Z] INFO: 🗑️  Database cleared for fresh restart
+[2025-06-21T17:28:52.386Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T17:28:56.598Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T17:28:56.599Z] INFO: Initializing database schema
+[2025-06-21T17:28:56.602Z] INFO: Database initialized successfully
+[2025-06-21T17:28:56.602Z] INFO: Setting up destination resolver
+[2025-06-21T17:28:56.602Z] INFO: Setting up executor services
+[2025-06-21T17:28:56.621Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T17:28:56.622Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T17:28:56.622Z] INFO: Validating configuration...
+[2025-06-21T17:28:56.622Z] INFO: ✅ Configuration validation passed
+[2025-06-21T17:28:56.622Z] INFO: Setting up chain listeners
+[2025-06-21T17:28:56.622Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T17:28:56.623Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T17:28:56.623Z] INFO: Starting Relayer services...
+[2025-06-21T17:28:56.623Z] INFO: Starting job queue processing
+[2025-06-21T17:28:56.623Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:28:56.624Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:28:56.830Z] INFO: Initialized baseSepolia starting from current block {"currentBlock":27379323,"startBlock":27379322,"confirmations":1}
+[2025-06-21T17:28:56.978Z] INFO: Initialized arbitrumSepolia starting from current block {"currentBlock":165806669,"startBlock":165806668,"confirmations":1}
+[2025-06-21T17:28:57.512Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T17:28:57.512Z] INFO: === Configuration Summary ===
+[2025-06-21T17:28:57.512Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T17:28:57.512Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T17:28:57.512Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:28:57.512Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T17:28:57.512Z] INFO: === End Configuration Summary ===
+[2025-06-21T17:29:08.351Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T17:29:08.351Z] INFO: Stopping Relayer...
+[2025-06-21T17:29:08.351Z] INFO: Stopping job queue processing
+[2025-06-21T17:29:08.351Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T17:29:08.351Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T17:29:08.352Z] INFO: 🗑️  Database cleared for fresh restart
+[2025-06-21T17:29:08.352Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T17:29:26.843Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T17:29:26.845Z] INFO: Initializing database schema
+[2025-06-21T17:29:26.847Z] INFO: Database initialized successfully
+[2025-06-21T17:29:26.847Z] INFO: Setting up destination resolver
+[2025-06-21T17:29:26.847Z] INFO: Setting up executor services
+[2025-06-21T17:29:26.872Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T17:29:26.873Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T17:29:26.873Z] INFO: Validating configuration...
+[2025-06-21T17:29:26.873Z] INFO: ✅ Configuration validation passed
+[2025-06-21T17:29:26.873Z] INFO: Setting up chain listeners
+[2025-06-21T17:29:26.873Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T17:29:26.874Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T17:29:26.875Z] INFO: Starting Relayer services...
+[2025-06-21T17:29:26.875Z] INFO: Starting job queue processing
+[2025-06-21T17:29:26.875Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:29:26.876Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:29:27.129Z] INFO: Initialized baseSepolia starting from current block {"currentBlock":27379339,"startBlock":27379338,"confirmations":1}
+[2025-06-21T17:29:27.252Z] INFO: Initialized arbitrumSepolia starting from current block {"currentBlock":165806790,"startBlock":165806789,"confirmations":1}
+[2025-06-21T17:29:27.915Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T17:29:27.915Z] INFO: === Configuration Summary ===
+[2025-06-21T17:29:27.915Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T17:29:27.915Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T17:29:27.916Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:29:27.916Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T17:29:27.916Z] INFO: === End Configuration Summary ===
+[2025-06-21T17:29:43.610Z] INFO: Created job for ValueSetCrossChain event {"jobId":1,"uniqueId":"baseSepolia-0xeb1b7922ef5e5e84f2c3fea7b6fcebf72d7f6d3330e8d53b20c14c90a96aa236-27-arbitrumSepolia","txHash":"0xeb1b7922ef5e5e84f2c3fea7b6fcebf72d7f6d3330e8d53b20c14c90a96aa236","destChain":"arbitrumSepolia","destContract":"0x324670730736B72A3EA73067F30c54F03B23934E"}
+[2025-06-21T17:29:43.894Z] INFO: Requesting proof for job 1 {"txHash":"0xeb1b7922ef5e5e84f2c3fea7b6fcebf72d7f6d3330e8d53b20c14c90a96aa236","chain":"baseSepolia","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:44.264Z] INFO: Requesting proof from Polymer {"txHash":"0xeb1b7922ef5e5e84f2c3fea7b6fcebf72d7f6d3330e8d53b20c14c90a96aa236","chain":"baseSepolia","blockNumber":27379345,"eventIndex":27}
+[2025-06-21T17:29:44.672Z] INFO: Proof job requested successfully {"jobId":400977,"attempt":1,"params":{"srcChainId":84532,"srcBlockNumber":27379345,"globalLogIndex":27}}
+[2025-06-21T17:29:44.672Z] INFO: Polling for proof completion {"jobId":400977}
+[2025-06-21T17:29:48.635Z] INFO: Proof completed successfully {"jobId":400977,"attempt":3,"proofLength":2656}
+[2025-06-21T17:29:48.636Z] INFO: Proof obtained successfully from Polymer {"jobId":400977,"blockNumber":27379345,"proofLength":2656}
+[2025-06-21T17:29:48.638Z] INFO: Proof obtained for job 1 {"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:48.896Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:48.899Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:29:48.905Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:48.906Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":0,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:49.896Z] INFO: Retrying job 1 {"attempt":1,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:50.896Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:50.900Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:29:50.901Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:50.901Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":1,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:51.897Z] INFO: Retrying job 1 {"attempt":2,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:52.898Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:52.902Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:29:52.906Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:52.906Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":2,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:53.899Z] INFO: Retrying job 1 {"attempt":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:54.900Z] INFO: Executing transaction for job 1 {"destChain":"arbitrumSepolia","destAddress":"0x324670730736B72A3EA73067F30c54F03B23934E","destMethod":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:54.901Z] INFO: Executing transaction {"chain":"arbitrumSepolia","contract":"0x324670730736B72A3EA73067F30c54F03B23934E","method":"setValueFromSource","methodSignature":"setValueFromSource(string key, bytes value, bytes proof)"}
+[2025-06-21T17:29:54.901Z] ERROR: Error processing job 1 {"error":"Key not found in event data","jobId":1,"status":"proof_ready","mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:54.901Z] ERROR: Job 1 failed {"error":"Key not found in event data","retryCount":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:29:55.901Z] ERROR: Job 1 exceeded max retries, giving up {"retryCount":3,"maxRetries":3,"mapping":"ValueSetCrossChain"}
+[2025-06-21T17:30:46.839Z] INFO: Received SIGINT, shutting down gracefully...
+[2025-06-21T17:30:46.840Z] INFO: Stopping Relayer...
+[2025-06-21T17:30:46.840Z] INFO: Stopping job queue processing
+[2025-06-21T17:30:46.840Z] INFO: Stopping polling for baseSepolia
+[2025-06-21T17:30:46.840Z] INFO: Stopping polling for arbitrumSepolia
+[2025-06-21T17:30:46.841Z] INFO: ✅ Relayer stopped successfully
+[2025-06-21T17:30:46.841Z] INFO: 🗑️  Database cleared for fresh restart
+[2025-06-21T17:32:07.410Z] INFO: Starting Polymer Relayer {"chains":["baseSepolia","arbitrumSepolia"],"contracts":["StateSyncV2"],"eventMappings":1,"enabledMappings":1}
+[2025-06-21T17:32:07.412Z] INFO: Initializing database schema
+[2025-06-21T17:32:07.414Z] INFO: Database initialized successfully
+[2025-06-21T17:32:07.414Z] INFO: Setting up destination resolver
+[2025-06-21T17:32:07.414Z] INFO: Setting up executor services
+[2025-06-21T17:32:07.433Z] INFO: ProofService initialized {"baseUrl":"https://proof.testnet.polymer.zone","timeout":30000,"retryAttempts":3,"supportedChains":["baseSepolia","arbitrumSepolia"]}
+[2025-06-21T17:32:07.433Z] INFO: Loaded 0 pending jobs from database
+[2025-06-21T17:32:07.433Z] INFO: Validating configuration...
+[2025-06-21T17:32:07.433Z] INFO: ✅ Configuration validation passed
+[2025-06-21T17:32:07.433Z] INFO: Setting up chain listeners
+[2025-06-21T17:32:07.433Z] INFO: Initializing contracts for baseSepolia
+[2025-06-21T17:32:07.435Z] INFO: Initializing contracts for arbitrumSepolia
+[2025-06-21T17:32:07.435Z] INFO: Starting Relayer services...
+[2025-06-21T17:32:07.435Z] INFO: Starting job queue processing
+[2025-06-21T17:32:07.435Z] INFO: Starting polling for baseSepolia {"interval":2000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:32:07.435Z] INFO: Starting polling for arbitrumSepolia {"interval":1000,"contractCount":1,"blockConfirmations":1}
+[2025-06-21T17:32:07.664Z] INFO: Initialized baseSepolia starting from current block {"currentBlock":27379419,"startBlock":27379418,"confirmations":1}
+[2025-06-21T17:32:07.835Z] INFO: Initialized arbitrumSepolia starting from current block {"currentBlock":165807432,"startBlock":165807431,"confirmations":1}
+[2025-06-21T17:32:08.097Z] INFO: ✅ Relayer started successfully {"listeners":2,"executors":2,"activeMappings":1}
+[2025-06-21T17:32:08.097Z] INFO: === Configuration Summary ===
+[2025-06-21T17:32:08.097Z] INFO: Chain arbitrumSepolia: {"chainId":421614,"pollingInterval":1000,"blockConfirmations":1,"gasMultiplier":1}
+[2025-06-21T17:32:08.097Z] INFO: Chain baseSepolia: {"chainId":84532,"pollingInterval":2000,"blockConfirmations":1,"gasMultiplier":1.1}
+[2025-06-21T17:32:08.098Z] INFO: === End Configuration Summary ===
+[2025-06-21T17:32:08.098Z] INFO: Mapping ValueSetCrossChain: {"source":"StateSyncV2.ValueSet","destination":"StateSyncV2.setValueFromSource","resolver":"baseToArbitrum","proofRequired":true,"enabled":true}
+[2025-06-21T17:32:08.097Z] INFO: Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:32:57.820Z] [INFO]  Starting Polymer Relayer {
+  "chains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ],
+  "contracts": [
+    "StateSyncV2"
+  ],
+  "eventMappings": 1,
+  "enabledMappings": 1
+}
+[2025-06-21T17:32:57.821Z] [INFO]  Initializing database schema
+[2025-06-21T17:32:57.822Z] [INFO]  Database initialized successfully
+[2025-06-21T17:32:57.822Z] [INFO]  Setting up destination resolver
+[2025-06-21T17:32:57.822Z] [INFO]  Setting up executor services
+[2025-06-21T17:32:57.840Z] [INFO]  ProofService initialized {
+  "baseUrl": "https://proof.testnet.polymer.zone",
+  "timeout": 30000,
+  "retryAttempts": 3,
+  "supportedChains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ]
+}
+[2025-06-21T17:32:57.840Z] [INFO]  Loaded 0 pending jobs from database
+[2025-06-21T17:32:57.840Z] [INFO]  Validating configuration...
+[2025-06-21T17:32:57.840Z] [INFO]  ✅ Configuration validation passed
+[2025-06-21T17:32:57.840Z] [INFO]  Setting up chain listeners
+[2025-06-21T17:32:57.840Z] [INFO]  Initializing contracts for baseSepolia
+[2025-06-21T17:32:57.841Z] [INFO]  Initializing contracts for arbitrumSepolia
+[2025-06-21T17:32:57.841Z] [INFO]  Starting Relayer services...
+[2025-06-21T17:32:57.841Z] [INFO]  Starting job queue processing
+[2025-06-21T17:32:57.842Z] [INFO]  Starting polling for baseSepolia {
+  "interval": 2000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:32:57.842Z] [INFO]  Starting polling for arbitrumSepolia {
+  "interval": 1000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:33:12.315Z] [INFO]  Starting Polymer Relayer {
+  "chains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ],
+  "contracts": [
+    "StateSyncV2"
+  ],
+  "eventMappings": 1,
+  "enabledMappings": 1
+}
+[2025-06-21T17:33:12.316Z] [INFO]  Initializing database schema
+[2025-06-21T17:33:12.317Z] [INFO]  Database initialized successfully
+[2025-06-21T17:33:12.317Z] [INFO]  Setting up destination resolver
+[2025-06-21T17:33:12.317Z] [INFO]  Setting up executor services
+[2025-06-21T17:33:12.337Z] [INFO]  ProofService initialized {
+  "baseUrl": "https://proof.testnet.polymer.zone",
+  "timeout": 30000,
+  "retryAttempts": 3,
+  "supportedChains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ]
+}
+[2025-06-21T17:33:12.337Z] [INFO]  Loaded 0 pending jobs from database
+[2025-06-21T17:33:12.337Z] [INFO]  Validating configuration...
+[2025-06-21T17:33:12.337Z] [INFO]  ✅ Configuration validation passed
+[2025-06-21T17:33:12.337Z] [INFO]  Setting up chain listeners
+[2025-06-21T17:33:12.337Z] [INFO]  Initializing contracts for baseSepolia
+[2025-06-21T17:33:12.338Z] [INFO]  Initializing contracts for arbitrumSepolia
+[2025-06-21T17:33:12.339Z] [INFO]  Starting Relayer services...
+[2025-06-21T17:33:12.339Z] [INFO]  Starting job queue processing
+[2025-06-21T17:33:12.339Z] [INFO]  Starting polling for baseSepolia {
+  "interval": 2000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:33:12.340Z] [INFO]  Starting polling for arbitrumSepolia {
+  "interval": 1000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:33:12.934Z] [INFO]  ✅ Relayer started successfully {
+  "listeners": 2,
+  "executors": 2,
+  "activeMappings": 1
+}
+[2025-06-21T17:33:12.934Z] [INFO]  === Configuration Summary ===
+[2025-06-21T17:33:12.934Z] [INFO]  Chain baseSepolia: {
+  "chainId": 84532,
+  "pollingInterval": 2000,
+  "blockConfirmations": 1,
+  "gasMultiplier": 1.1
+}
+[2025-06-21T17:33:12.934Z] [INFO]  Chain arbitrumSepolia: {
+  "chainId": 421614,
+  "pollingInterval": 1000,
+  "blockConfirmations": 1,
+  "gasMultiplier": 1
+}
+[2025-06-21T17:33:12.934Z] [INFO]  Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:33:12.935Z] [INFO]  Mapping ValueSetCrossChain: {
+  "source": "StateSyncV2.ValueSet",
+  "destination": "StateSyncV2.setValueFromSource",
+  "resolver": "baseToArbitrum",
+  "proofRequired": true,
+  "enabled": true
+}
+[2025-06-21T17:33:12.935Z] [INFO]  === End Configuration Summary ===
+[2025-06-21T17:33:27.299Z] [ERROR] Failed to process event for mapping ValueSetCrossChain {
+  "error": "JSON.stringify cannot serialize BigInt.",
+  "eventData": {
+    "name": "ValueSet",
+    "args": {
+      "sender": "0xf22a0aEd5a05bF98FFF814Ad950EaF82fCeA30CC",
+      "key": "asdf",
+      "value": "0x61736466",
+      "nonce": "16",
+      "hashedKey": "0xb49d1dedb5c6e4259c4341d86ee8fd797aa9ec98f6c08dbe15dc69c259a12025",
+      "version": "13"
+    },
+    "blockNumber": 27379458,
+    "transactionIndex": 7,
+    "index": 5
+  }
+}
+[2025-06-21T17:34:22.255Z] [INFO]  Starting Polymer Relayer {
+  "chains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ],
+  "contracts": [
+    "StateSyncV2"
+  ],
+  "eventMappings": 1,
+  "enabledMappings": 1
+}
+[2025-06-21T17:34:22.257Z] [INFO]  Initializing database schema
+[2025-06-21T17:34:22.257Z] [INFO]  Database initialized successfully
+[2025-06-21T17:34:22.257Z] [INFO]  Setting up destination resolver
+[2025-06-21T17:34:22.257Z] [INFO]  Setting up executor services
+[2025-06-21T17:34:22.276Z] [INFO]  ProofService initialized {
+  "baseUrl": "https://proof.testnet.polymer.zone",
+  "timeout": 30000,
+  "retryAttempts": 3,
+  "supportedChains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ]
+}
+[2025-06-21T17:34:22.277Z] [INFO]  Loaded 0 pending jobs from database
+[2025-06-21T17:34:22.277Z] [INFO]  Validating configuration...
+[2025-06-21T17:34:22.277Z] [INFO]  ✅ Configuration validation passed
+[2025-06-21T17:34:22.277Z] [INFO]  Setting up chain listeners
+[2025-06-21T17:34:22.277Z] [INFO]  Initializing contracts for baseSepolia
+[2025-06-21T17:34:22.281Z] [INFO]  Initializing contracts for arbitrumSepolia
+[2025-06-21T17:34:22.282Z] [INFO]  Starting Relayer services...
+[2025-06-21T17:34:22.282Z] [INFO]  Starting job queue processing
+[2025-06-21T17:34:22.282Z] [INFO]  Starting polling for baseSepolia {
+  "interval": 2000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:34:22.283Z] [INFO]  Starting polling for arbitrumSepolia {
+  "interval": 1000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:34:22.907Z] [INFO]  ✅ Relayer started successfully {
+  "listeners": 2,
+  "executors": 2,
+  "activeMappings": 1
+}
+[2025-06-21T17:34:22.907Z] [INFO]  === Configuration Summary ===
+[2025-06-21T17:34:22.907Z] [INFO]  Chain baseSepolia: {
+  "chainId": 84532,
+  "pollingInterval": 2000,
+  "blockConfirmations": 1,
+  "gasMultiplier": 1.1
+}
+[2025-06-21T17:34:22.907Z] [INFO]  Chain arbitrumSepolia: {
+  "chainId": 421614,
+  "pollingInterval": 1000,
+  "blockConfirmations": 1,
+  "gasMultiplier": 1
+}
+[2025-06-21T17:34:22.907Z] [INFO]  Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:34:22.907Z] [INFO]  Mapping ValueSetCrossChain: {
+  "source": "StateSyncV2.ValueSet",
+  "destination": "StateSyncV2.setValueFromSource",
+  "resolver": "baseToArbitrum",
+  "proofRequired": true,
+  "enabled": true
+}
+[2025-06-21T17:34:22.907Z] [INFO]  === End Configuration Summary ===
+[2025-06-21T17:34:32.007Z] [INFO]  Starting Polymer Relayer {
+  "chains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ],
+  "contracts": [
+    "StateSyncV2"
+  ],
+  "eventMappings": 1,
+  "enabledMappings": 1
+}
+[2025-06-21T17:34:32.009Z] [INFO]  Initializing database schema
+[2025-06-21T17:34:32.009Z] [INFO]  Database initialized successfully
+[2025-06-21T17:34:32.009Z] [INFO]  Setting up destination resolver
+[2025-06-21T17:34:32.009Z] [INFO]  Setting up executor services
+[2025-06-21T17:34:32.028Z] [INFO]  ProofService initialized {
+  "baseUrl": "https://proof.testnet.polymer.zone",
+  "timeout": 30000,
+  "retryAttempts": 3,
+  "supportedChains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ]
+}
+[2025-06-21T17:34:32.029Z] [INFO]  Loaded 0 pending jobs from database
+[2025-06-21T17:34:32.029Z] [INFO]  Validating configuration...
+[2025-06-21T17:34:32.029Z] [INFO]  ✅ Configuration validation passed
+[2025-06-21T17:34:32.029Z] [INFO]  Setting up chain listeners
+[2025-06-21T17:34:32.029Z] [INFO]  Initializing contracts for baseSepolia
+[2025-06-21T17:34:32.030Z] [INFO]  Initializing contracts for arbitrumSepolia
+[2025-06-21T17:34:32.030Z] [INFO]  Starting Relayer services...
+[2025-06-21T17:34:32.030Z] [INFO]  Starting job queue processing
+[2025-06-21T17:34:32.031Z] [INFO]  Starting polling for baseSepolia {
+  "interval": 2000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:34:32.031Z] [INFO]  Starting polling for arbitrumSepolia {
+  "interval": 1000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:34:32.639Z] [INFO]  ✅ Relayer started successfully {
+  "listeners": 2,
+  "executors": 2,
+  "activeMappings": 1
+}
+[2025-06-21T17:34:32.639Z] [INFO]  === Configuration Summary ===
+[2025-06-21T17:34:32.640Z] [INFO]  Chain baseSepolia: {
+  "chainId": 84532,
+  "pollingInterval": 2000,
+  "blockConfirmations": 1,
+  "gasMultiplier": 1.1
+}
+[2025-06-21T17:34:32.640Z] [INFO]  Chain arbitrumSepolia: {
+  "chainId": 421614,
+  "pollingInterval": 1000,
+  "blockConfirmations": 1,
+  "gasMultiplier": 1
+}
+[2025-06-21T17:34:32.640Z] [INFO]  Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:34:32.641Z] [INFO]  Mapping ValueSetCrossChain: {
+  "source": "StateSyncV2.ValueSet",
+  "destination": "StateSyncV2.setValueFromSource",
+  "resolver": "baseToArbitrum",
+  "proofRequired": true,
+  "enabled": true
+}
+[2025-06-21T17:34:32.641Z] [INFO]  === End Configuration Summary ===
+[2025-06-21T17:34:35.198Z] [INFO]  Received SIGINT, shutting down gracefully...
+[2025-06-21T17:34:35.199Z] [INFO]  Stopping Relayer...
+[2025-06-21T17:34:35.199Z] [INFO]  Stopping job queue processing
+[2025-06-21T17:34:35.199Z] [INFO]  Stopping polling for baseSepolia
+[2025-06-21T17:34:35.199Z] [INFO]  Stopping polling for arbitrumSepolia
+[2025-06-21T17:34:35.200Z] [INFO]  🗑️  Database cleared for fresh restart
+[2025-06-21T17:34:35.200Z] [INFO]  ✅ Relayer stopped successfully
+[2025-06-21T17:34:36.280Z] [INFO]  Starting Polymer Relayer {
+  "chains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ],
+  "contracts": [
+    "StateSyncV2"
+  ],
+  "eventMappings": 1,
+  "enabledMappings": 1
+}
+[2025-06-21T17:34:36.282Z] [INFO]  Initializing database schema
+[2025-06-21T17:34:36.285Z] [INFO]  Database initialized successfully
+[2025-06-21T17:34:36.285Z] [INFO]  Setting up destination resolver
+[2025-06-21T17:34:36.285Z] [INFO]  Setting up executor services
+[2025-06-21T17:34:36.304Z] [INFO]  ProofService initialized {
+  "baseUrl": "https://proof.testnet.polymer.zone",
+  "timeout": 30000,
+  "retryAttempts": 3,
+  "supportedChains": [
+    "baseSepolia",
+    "arbitrumSepolia"
+  ]
+}
+[2025-06-21T17:34:36.304Z] [INFO]  Loaded 0 pending jobs from database
+[2025-06-21T17:34:36.304Z] [INFO]  Validating configuration...
+[2025-06-21T17:34:36.305Z] [INFO]  ✅ Configuration validation passed
+[2025-06-21T17:34:36.305Z] [INFO]  Setting up chain listeners
+[2025-06-21T17:34:36.305Z] [INFO]  Initializing contracts for baseSepolia
+[2025-06-21T17:34:36.306Z] [INFO]  Initializing contracts for arbitrumSepolia
+[2025-06-21T17:34:36.306Z] [INFO]  Starting Relayer services...
+[2025-06-21T17:34:36.306Z] [INFO]  Starting job queue processing
+[2025-06-21T17:34:36.307Z] [INFO]  Starting polling for baseSepolia {
+  "interval": 2000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:34:36.307Z] [INFO]  Starting polling for arbitrumSepolia {
+  "interval": 1000,
+  "contractCount": 1,
+  "blockConfirmations": 1
+}
+[2025-06-21T17:34:36.503Z] [INFO]  Initialized baseSepolia starting from current block {
+  "currentBlock": 27379493,
+  "startBlock": 27379492,
+  "confirmations": 1
+}
+[2025-06-21T17:34:36.639Z] [INFO]  Initialized arbitrumSepolia starting from current block {
+  "currentBlock": 165808024,
+  "startBlock": 165808023,
+  "confirmations": 1
+}
+[2025-06-21T17:34:37.196Z] [INFO]  ✅ Relayer started successfully {
+  "listeners": 2,
+  "executors": 2,
+  "activeMappings": 1
+}
+[2025-06-21T17:34:37.197Z] [INFO]  === Configuration Summary ===
+[2025-06-21T17:34:37.197Z] [INFO]  Chain baseSepolia: {
+  "chainId": 84532,
+  "pollingInterval": 2000,
+  "blockConfirmations": 1,
+  "gasMultiplier": 1.1
+}
+[2025-06-21T17:34:37.197Z] [INFO]  Chain arbitrumSepolia: {
+  "chainId": 421614,
+  "pollingInterval": 1000,
+  "blockConfirmations": 1,
+  "gasMultiplier": 1
+}
+[2025-06-21T17:34:37.198Z] [INFO]  Contract StateSyncV2: baseSepolia(both), arbitrumSepolia(both)
+[2025-06-21T17:34:37.198Z] [INFO]  Mapping ValueSetCrossChain: {
+  "source": "StateSyncV2.ValueSet",
+  "destination": "StateSyncV2.setValueFromSource",
+  "resolver": "baseToArbitrum",
+  "proofRequired": true,
+  "enabled": true
+}
+[2025-06-21T17:34:37.198Z] [INFO]  === End Configuration Summary ===
+[2025-06-21T17:34:50.947Z] [INFO]  Created job for ValueSetCrossChain event {
+  "jobId": 1,
+  "uniqueId": "baseSepolia-0x4359ff18b4d29169caa420735f8ed525863f33f3cc3ab0ea3a6adb6a4126eac8-255-arbitrumSepolia",
+  "txHash": "0x4359ff18b4d29169caa420735f8ed525863f33f3cc3ab0ea3a6adb6a4126eac8",
+  "destChain": "arbitrumSepolia",
+  "destContract": "0x324670730736B72A3EA73067F30c54F03B23934E"
+}
+[2025-06-21T17:34:51.321Z] [INFO]  Requesting proof for job 1 {
+  "txHash": "0x4359ff18b4d29169caa420735f8ed525863f33f3cc3ab0ea3a6adb6a4126eac8",
+  "chain": "baseSepolia",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:34:51.819Z] [INFO]  Requesting proof from Polymer {
+  "txHash": "0x4359ff18b4d29169caa420735f8ed525863f33f3cc3ab0ea3a6adb6a4126eac8",
+  "chain": "baseSepolia",
+  "blockNumber": 27379499,
+  "eventIndex": 255
+}
+[2025-06-21T17:34:52.239Z] [INFO]  Proof job requested successfully {
+  "jobId": 400979,
+  "attempt": 1,
+  "params": {
+    "srcChainId": 84532,
+    "srcBlockNumber": 27379499,
+    "globalLogIndex": 255
+  }
+}
+[2025-06-21T17:34:52.240Z] [INFO]  Polling for proof completion {
+  "jobId": 400979
+}
+[2025-06-21T17:34:56.235Z] [INFO]  Proof completed successfully {
+  "jobId": 400979,
+  "attempt": 3,
+  "proofLength": 2656
+}
+[2025-06-21T17:34:56.235Z] [INFO]  Proof obtained successfully from Polymer {
+  "jobId": 400979,
+  "blockNumber": 27379499,
+  "proofLength": 2656
+}
+[2025-06-21T17:34:56.236Z] [INFO]  Proof obtained for job 1 {
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:34:56.326Z] [INFO]  Executing transaction for job 1 {
+  "destChain": "arbitrumSepolia",
+  "destAddress": "0x324670730736B72A3EA73067F30c54F03B23934E",
+  "destMethod": "setValueFromSource",
+  "methodSignature": "setValueFromSource(string key, bytes value, bytes proof)",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:34:56.327Z] [INFO]  Executing transaction {
+  "chain": "arbitrumSepolia",
+  "contract": "0x324670730736B72A3EA73067F30c54F03B23934E",
+  "method": "setValueFromSource",
+  "methodSignature": "setValueFromSource(string key, bytes value, bytes proof)"
+}
+[2025-06-21T17:34:58.532Z] [INFO]  Transaction submitted {
+  "txHash": "0x9bba921079e62bc7773046084d0b1ed204c2db9e4da0e88f1dd7943fd2d5dd52",
+  "gasLimit": "186514",
+  "method": "setValueFromSource"
+}
+[2025-06-21T17:34:58.800Z] [INFO]  Transaction confirmed {
+  "txHash": "0x9bba921079e62bc7773046084d0b1ed204c2db9e4da0e88f1dd7943fd2d5dd52",
+  "blockNumber": 165808112,
+  "gasUsed": "183887",
+  "confirmations": 1
+}
+[2025-06-21T17:34:58.803Z] [INFO]  Job 1 completed successfully {
+  "destTxHash": "0x9bba921079e62bc7773046084d0b1ed204c2db9e4da0e88f1dd7943fd2d5dd52",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:36:53.012Z] [INFO]  Created job for ValueSetCrossChain event {
+  "jobId": 2,
+  "uniqueId": "baseSepolia-0x9b8cb8772a4e94c43ff566c57d94129dea7f7946cbb88c67e118c1addc2079fb-128-arbitrumSepolia",
+  "txHash": "0x9b8cb8772a4e94c43ff566c57d94129dea7f7946cbb88c67e118c1addc2079fb",
+  "destChain": "arbitrumSepolia",
+  "destContract": "0x324670730736B72A3EA73067F30c54F03B23934E"
+}
+[2025-06-21T17:36:53.431Z] [INFO]  Requesting proof for job 2 {
+  "txHash": "0x9b8cb8772a4e94c43ff566c57d94129dea7f7946cbb88c67e118c1addc2079fb",
+  "chain": "baseSepolia",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:36:53.732Z] [INFO]  Requesting proof from Polymer {
+  "txHash": "0x9b8cb8772a4e94c43ff566c57d94129dea7f7946cbb88c67e118c1addc2079fb",
+  "chain": "baseSepolia",
+  "blockNumber": 27379560,
+  "eventIndex": 128
+}
+[2025-06-21T17:36:54.097Z] [INFO]  Proof job requested successfully {
+  "jobId": 400981,
+  "attempt": 1,
+  "params": {
+    "srcChainId": 84532,
+    "srcBlockNumber": 27379560,
+    "globalLogIndex": 128
+  }
+}
+[2025-06-21T17:36:54.098Z] [INFO]  Polling for proof completion {
+  "jobId": 400981
+}
+[2025-06-21T17:36:58.081Z] [INFO]  Proof completed successfully {
+  "jobId": 400981,
+  "attempt": 3,
+  "proofLength": 2656
+}
+[2025-06-21T17:36:58.081Z] [INFO]  Proof obtained successfully from Polymer {
+  "jobId": 400981,
+  "blockNumber": 27379560,
+  "proofLength": 2656
+}
+[2025-06-21T17:36:58.084Z] [INFO]  Proof obtained for job 2 {
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:36:58.435Z] [INFO]  Executing transaction for job 2 {
+  "destChain": "arbitrumSepolia",
+  "destAddress": "0x324670730736B72A3EA73067F30c54F03B23934E",
+  "destMethod": "setValueFromSource",
+  "methodSignature": "setValueFromSource(string key, bytes value, bytes proof)",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:36:58.436Z] [INFO]  Executing transaction {
+  "chain": "arbitrumSepolia",
+  "contract": "0x324670730736B72A3EA73067F30c54F03B23934E",
+  "method": "setValueFromSource",
+  "methodSignature": "setValueFromSource(string key, bytes value, bytes proof)"
+}
+[2025-06-21T17:36:59.007Z] [INFO]  Created job for ValueSetCrossChain event {
+  "jobId": 3,
+  "uniqueId": "baseSepolia-0x8dfee3b5c48e4aced149223f9aee8d86d2399ad197aab313d6a11190a7b4a067-158-arbitrumSepolia",
+  "txHash": "0x8dfee3b5c48e4aced149223f9aee8d86d2399ad197aab313d6a11190a7b4a067",
+  "destChain": "arbitrumSepolia",
+  "destContract": "0x324670730736B72A3EA73067F30c54F03B23934E"
+}
+[2025-06-21T17:36:59.435Z] [INFO]  Requesting proof for job 3 {
+  "txHash": "0x8dfee3b5c48e4aced149223f9aee8d86d2399ad197aab313d6a11190a7b4a067",
+  "chain": "baseSepolia",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:36:59.751Z] [INFO]  Requesting proof from Polymer {
+  "txHash": "0x8dfee3b5c48e4aced149223f9aee8d86d2399ad197aab313d6a11190a7b4a067",
+  "chain": "baseSepolia",
+  "blockNumber": 27379563,
+  "eventIndex": 158
+}
+[2025-06-21T17:37:00.074Z] [INFO]  Proof job requested successfully {
+  "jobId": 400982,
+  "attempt": 1,
+  "params": {
+    "srcChainId": 84532,
+    "srcBlockNumber": 27379563,
+    "globalLogIndex": 158
+  }
+}
+[2025-06-21T17:37:00.074Z] [INFO]  Polling for proof completion {
+  "jobId": 400982
+}
+[2025-06-21T17:37:00.533Z] [INFO]  Transaction submitted {
+  "txHash": "0x3ec5f2bf99398a005797668600943d233bd44edb62cb341bc9ea980666d0c9d0",
+  "gasLimit": "186550",
+  "method": "setValueFromSource"
+}
+[2025-06-21T17:37:00.813Z] [INFO]  Transaction confirmed {
+  "txHash": "0x3ec5f2bf99398a005797668600943d233bd44edb62cb341bc9ea980666d0c9d0",
+  "blockNumber": 165808599,
+  "gasUsed": "183923",
+  "confirmations": 1
+}
+[2025-06-21T17:37:00.816Z] [INFO]  Job 2 completed successfully {
+  "destTxHash": "0x3ec5f2bf99398a005797668600943d233bd44edb62cb341bc9ea980666d0c9d0",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:37:04.808Z] [INFO]  Proof completed successfully {
+  "jobId": 400982,
+  "attempt": 4,
+  "proofLength": 2656
+}
+[2025-06-21T17:37:04.808Z] [INFO]  Proof obtained successfully from Polymer {
+  "jobId": 400982,
+  "blockNumber": 27379563,
+  "proofLength": 2656
+}
+[2025-06-21T17:37:04.812Z] [INFO]  Proof obtained for job 3 {
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:37:05.439Z] [INFO]  Executing transaction for job 3 {
+  "destChain": "arbitrumSepolia",
+  "destAddress": "0x324670730736B72A3EA73067F30c54F03B23934E",
+  "destMethod": "setValueFromSource",
+  "methodSignature": "setValueFromSource(string key, bytes value, bytes proof)",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:37:05.442Z] [INFO]  Executing transaction {
+  "chain": "arbitrumSepolia",
+  "contract": "0x324670730736B72A3EA73067F30c54F03B23934E",
+  "method": "setValueFromSource",
+  "methodSignature": "setValueFromSource(string key, bytes value, bytes proof)"
+}
+[2025-06-21T17:37:07.630Z] [INFO]  Transaction submitted {
+  "txHash": "0xad8ead32ca233fdfe42463c436642c36cdd5f9f6c436aa5c9e5777550419deec",
+  "gasLimit": "144891",
+  "method": "setValueFromSource"
+}
+[2025-06-21T17:37:07.901Z] [INFO]  Transaction confirmed {
+  "txHash": "0xad8ead32ca233fdfe42463c436642c36cdd5f9f6c436aa5c9e5777550419deec",
+  "blockNumber": 165808627,
+  "gasUsed": "143738",
+  "confirmations": 1
+}
+[2025-06-21T17:37:07.904Z] [INFO]  Job 3 completed successfully {
+  "destTxHash": "0xad8ead32ca233fdfe42463c436642c36cdd5f9f6c436aa5c9e5777550419deec",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:39:37.194Z] [INFO]  
+=== Relayer Metrics ===
+polling_baseSepolia: 151 (avg: 459.91ms)
+events_processed_arbitrumSepolia_ValueSet: 0
+blocks_processed_arbitrumSepolia: 1200
+polling_arbitrumSepolia: 300 (avg: 567.78ms)
+events_processed_baseSepolia_ValueSet: 3
+blocks_processed_baseSepolia: 150
+jobs_created_baseSepolia_arbitrumSepolia: 3
+proof_requests_success: 3
+proof_request: 3 (avg: 4608.33ms)
+job_processing_pending: 3 (avg: 4981.67ms)
+jobs_processed_pending: 3
+jobs_processed_mapping_ValueSetCrossChain: 6
+executions_success_arbitrumSepolia: 3
+execution_arbitrumSepolia: 3 (avg: 2436.67ms)
+jobs_completed_arbitrumSepolia: 3
+jobs_completed_mapping_ValueSetCrossChain: 3
+job_processing_proof_ready: 3 (avg: 2441.67ms)
+jobs_processed_proof_ready: 3
+[2025-06-21T17:39:37.194Z] [INFO]  Queue Stats {
+  "queueLength": 0,
+  "isProcessing": true,
+  "jobsByStatus": {},
+  "jobsByMapping": {}
+}
+[2025-06-21T17:39:37.194Z] [INFO]  Database Stats {
+  "completed": 3
+}
+[2025-06-21T17:44:37.189Z] [INFO]  
+=== Relayer Metrics ===
+polling_baseSepolia: 300 (avg: 456.92ms)
+events_processed_arbitrumSepolia_ValueSet: 0
+blocks_processed_arbitrumSepolia: 2353
+polling_arbitrumSepolia: 599 (avg: 562.50ms)
+events_processed_baseSepolia_ValueSet: 3
+blocks_processed_baseSepolia: 299
+jobs_created_baseSepolia_arbitrumSepolia: 3
+proof_requests_success: 3
+proof_request: 3 (avg: 4608.33ms)
+job_processing_pending: 3 (avg: 4981.67ms)
+jobs_processed_pending: 3
+jobs_processed_mapping_ValueSetCrossChain: 6
+executions_success_arbitrumSepolia: 3
+execution_arbitrumSepolia: 3 (avg: 2436.67ms)
+jobs_completed_arbitrumSepolia: 3
+jobs_completed_mapping_ValueSetCrossChain: 3
+job_processing_proof_ready: 3 (avg: 2441.67ms)
+jobs_processed_proof_ready: 3
+[2025-06-21T17:44:37.190Z] [INFO]  Database Stats {
+  "completed": 3
+}
+[2025-06-21T17:44:37.190Z] [INFO]  Queue Stats {
+  "queueLength": 0,
+  "isProcessing": true,
+  "jobsByStatus": {},
+  "jobsByMapping": {}
+}
+[2025-06-21T17:46:51.237Z] [INFO]  Created job for ValueSetCrossChain event {
+  "jobId": 4,
+  "uniqueId": "baseSepolia-0xf813f96adc2e44d0ef39102071dca9fe10bb65c4a2817937220c495b67047a73-39-arbitrumSepolia",
+  "txHash": "0xf813f96adc2e44d0ef39102071dca9fe10bb65c4a2817937220c495b67047a73",
+  "destChain": "arbitrumSepolia",
+  "destContract": "0x324670730736B72A3EA73067F30c54F03B23934E"
+}
+[2025-06-21T17:46:51.909Z] [INFO]  Requesting proof for job 4 {
+  "txHash": "0xf813f96adc2e44d0ef39102071dca9fe10bb65c4a2817937220c495b67047a73",
+  "chain": "baseSepolia",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:46:52.720Z] [INFO]  Requesting proof from Polymer {
+  "txHash": "0xf813f96adc2e44d0ef39102071dca9fe10bb65c4a2817937220c495b67047a73",
+  "chain": "baseSepolia",
+  "blockNumber": 27379859,
+  "eventIndex": 39
+}
+[2025-06-21T17:46:53.135Z] [INFO]  Proof job requested successfully {
+  "jobId": 400986,
+  "attempt": 1,
+  "params": {
+    "srcChainId": 84532,
+    "srcBlockNumber": 27379859,
+    "globalLogIndex": 39
+  }
+}
+[2025-06-21T17:46:53.136Z] [INFO]  Polling for proof completion {
+  "jobId": 400986
+}
+[2025-06-21T17:46:58.769Z] [INFO]  Proof completed successfully {
+  "jobId": 400986,
+  "attempt": 5,
+  "proofLength": 2656
+}
+[2025-06-21T17:46:58.769Z] [INFO]  Proof obtained successfully from Polymer {
+  "jobId": 400986,
+  "blockNumber": 27379859,
+  "proofLength": 2656
+}
+[2025-06-21T17:46:58.772Z] [INFO]  Proof obtained for job 4 {
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:46:58.915Z] [INFO]  Executing transaction for job 4 {
+  "destChain": "arbitrumSepolia",
+  "destAddress": "0x324670730736B72A3EA73067F30c54F03B23934E",
+  "destMethod": "setValueFromSource",
+  "methodSignature": "setValueFromSource(string key, bytes value, bytes proof)",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:46:58.916Z] [INFO]  Executing transaction {
+  "chain": "arbitrumSepolia",
+  "contract": "0x324670730736B72A3EA73067F30c54F03B23934E",
+  "method": "setValueFromSource",
+  "methodSignature": "setValueFromSource(string key, bytes value, bytes proof)"
+}
+[2025-06-21T17:47:01.202Z] [INFO]  Transaction submitted {
+  "txHash": "0x992a9ccb6d2a9ccca388937dc03d344adb88a6db2a4e6e2017f4a5394a611a1b",
+  "gasLimit": "186473",
+  "method": "setValueFromSource"
+}
+[2025-06-21T17:47:01.474Z] [INFO]  Transaction confirmed {
+  "txHash": "0x992a9ccb6d2a9ccca388937dc03d344adb88a6db2a4e6e2017f4a5394a611a1b",
+  "blockNumber": 165810956,
+  "gasUsed": "183847",
+  "confirmations": 1
+}
+[2025-06-21T17:47:01.475Z] [INFO]  Job 4 completed successfully {
+  "destTxHash": "0x992a9ccb6d2a9ccca388937dc03d344adb88a6db2a4e6e2017f4a5394a611a1b",
+  "mapping": "ValueSetCrossChain"
+}
+[2025-06-21T17:47:12.377Z] [INFO]  Received SIGINT, shutting down gracefully...
+[2025-06-21T17:47:12.378Z] [INFO]  Stopping Relayer...
+[2025-06-21T17:47:12.378Z] [INFO]  Stopping polling for arbitrumSepolia
+[2025-06-21T17:47:12.378Z] [INFO]  Stopping job queue processing
+[2025-06-21T17:47:12.378Z] [INFO]  Stopping polling for baseSepolia
+[2025-06-21T17:47:12.381Z] [INFO]  🗑️  Database cleared for fresh restart
+[2025-06-21T17:47:12.381Z] [INFO]  ✅ Relayer stopped successfully

@@ -1,0 +1,31 @@
+{
+  "name": "polymer-simple-relayer-backend",
+  "version": "1.0.0",
+  "description": "A TypeScript/Bun backend relayer for cross-chain operations",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "bun run --watch src/main.ts",
+    "start": "bun run src/main.ts",
+    "start:prod": "bun run dist/main.js",
+    "build": "bun build src/main.ts --outdir ./dist --target bun",
+    "test": "bun test",
+    "db:init": "bun run src/scripts/initDatabase.ts",
+    "db:clear": "rm -f relayer.db && echo 'Database cleared'",
+    "db:view": "sqlite3 -header -column relayer.db \"select id, status, source_chain, dest_chain, source_tx_hash, dest_tx_hash, retry_count, mapping_name, (strftime('%s', completed_at) - strftime('%s', created_at)) as 'time_taken_s' from jobs;\""
+  },
+  "keywords": ["relayer", "blockchain", "cross-chain", "typescript", "bun"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.8.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "bun-types": "latest",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+} 
