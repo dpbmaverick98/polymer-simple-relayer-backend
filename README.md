@@ -310,20 +310,17 @@ The relayer includes robust error handling:
 - **Graceful Shutdown**: On SIGINT/SIGTERM, the relayer finishes in-flight work before exiting.
 - **Configuration Validation**: The relayer validates your configuration file on startup to catch errors early.
 
-## 🔒 Security
+## 🚀 Roadmap
 
-- **Private Key Management**: Use environment variables (e.g., `${PRIVATE_KEY}`) in your config to keep keys out of version control.
-- **RPC Endpoint Security**: Use authenticated RPC endpoints for production workloads.
-- **Input Validation**: The relayer validates event and method signatures to ensure data integrity.
-- **Error Sanitization**: Sensitive data is excluded from logs where possible.
+### 1. Performance Improvements
+- Implement faster event indexing using Eventeum architecture
+- Refactor execution layer into dedicated gas and nonce manager classes
+- Add multi-threaded wallet support with circuit breaker pattern for stuck transactions
 
-## 🤝 Contributing
-
-1.  Fork the repository
-2.  Create a feature branch: `git checkout -b feature/amazing-feature`
-3.  Commit changes: `git commit -m 'Add amazing feature'`
-4.  Push to branch: `git push origin feature/amazing-feature`
-5.  Open a Pull Request
+### 2. Monitoring & Operations
+- Build web UI dashboard displaying job status, transaction hashes, retry counts, and mapping details
+- Enhanced logging system it sucks rn - kek
+  
 
 ## 📄 License
 
