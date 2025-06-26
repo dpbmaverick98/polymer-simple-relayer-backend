@@ -1,0 +1,74 @@
+{
+  "chains": {
+    "baseSepolia": {
+      "chainId": 84532,
+      "rpc": "${BASE_SEPOLIA_RPC}",
+      "privateKey": "${PRIVATE_KEY}",
+      "pollingInterval": 2000,
+      "blockConfirmations": 1,
+      "gasMultiplier": 1.1,
+      "gasLimit": "1000000"
+    },
+    "arbitrumSepolia": {
+      "chainId": 421614,
+      "rpc": "${ARBITRUM_SEPOLIA_RPC}",
+      "privateKey": "${PRIVATE_KEY}",
+      "pollingInterval": 1000,
+      "blockConfirmations": 1,
+      "gasMultiplier": 1.0,
+      "gasLimit": "2000000"
+    }
+  },
+  "contracts": {
+    "StateSyncV2": {
+      "baseSepolia": {
+        "address": "0xdda9a457771534eDba705E1D79B1ed0f732d642E",
+        "type": "source"
+      },
+      "arbitrumSepolia": {
+        "address": "0x324670730736B72A3EA73067F30c54F03B23934E",
+        "type": "both"
+      }
+    }
+  },
+  "eventMappings": [
+    {
+      "name": "ValueSetCrossChain",
+      "sourceEvent": {
+        "contractName": "StateSyncV2",
+        "eventName": "ValueSet",
+        "eventSignature": "ValueSet(address indexed sender, string key, bytes value, uint256 nonce, bytes32 indexed hashedKey, uint256 version)"
+      },
+      "destinationCall": {
+        "contractName": "StateSyncV2",
+        "methodName": "setValueFromSource",
+        "methodSignature": "setValueFromSource(string key, bytes value, bytes proof)"
+      },
+      "destinationResolver": "baseToArbitrum",
+      "proofRequired": true,
+      "enabled": true
+    }
+  ],
+  "destinationResolvers": {
+    "baseToArbitrum": {
+      "type": "static",
+      "destinations": [
+        "arbitrumSepolia"
+      ]
+    }
+  },
+  "proofApi": {
+    "baseUrl": "https://proof.testnet.polymer.zone",
+    "apiKey": "${POLYMER_API_KEY}",
+    "timeout": 30000,
+    "retryAttempts": 3
+  },
+  "database": {
+    "path": "./relayer.db"
+  },
+  "logging": {
+    "level": "info",
+    "enableFileLogging": false,
+    "logPath": "./logs"
+  }
+} 

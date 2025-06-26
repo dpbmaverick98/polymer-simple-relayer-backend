@@ -44,27 +44,6 @@ bun run build
 bun run start
 ```
 
-## 🐳 Running with Docker
-
-For a consistent and portable environment, you can build and run the relayer using Docker.
-
-1.  **Create a `.env` file** at the root of the project. This is necessary because the Docker container will need the environment variables to configure itself. You can copy the example:
-    ```bash
-    cp .env.example .env
-    ```
-    Then, edit the `.env` file with your RPC URLs and private key.
-
-2.  **Build the Docker image:**
-    ```bash
-    docker build -t polymer-relayer .
-    ```
-
-3.  **Run the Docker container:**
-    ```bash
-    docker run --rm -it --env-file .env polymer-relayer
-    ```
-    The `--env-file` flag securely passes your environment variables to the container. The container will automatically use the `relayer.config.json` from the source code.
-
 ## ⚙️ Configuration
 
 The entire relayer is controlled by a single `relayer.config.json` file. Use environment variables (e.g., `${PRIVATE_KEY}`) for sensitive data.
@@ -310,17 +289,20 @@ The relayer includes robust error handling:
 - **Graceful Shutdown**: On SIGINT/SIGTERM, the relayer finishes in-flight work before exiting.
 - **Configuration Validation**: The relayer validates your configuration file on startup to catch errors early.
 
-## 🚀 Roadmap
+## 🔒 Security
 
-### 1. Performance Improvements
-- Implement faster event indexing using Eventeum architecture
-- Refactor execution layer into dedicated gas and nonce manager classes
-- Add multi-threaded wallet support with circuit breaker pattern for stuck transactions
+- **Private Key Management**: Use environment variables (e.g., `${PRIVATE_KEY}`) in your config to keep keys out of version control.
+- **RPC Endpoint Security**: Use authenticated RPC endpoints for production workloads.
+- **Input Validation**: The relayer validates event and method signatures to ensure data integrity.
+- **Error Sanitization**: Sensitive data is excluded from logs where possible.
 
-### 2. Monitoring & Operations
-- Build web UI dashboard displaying job status, transaction hashes, retry counts, and mapping details
-- Enhanced logging system it sucks rn - kek
-  
+## 🤝 Contributing
+
+1.  Fork the repository
+2.  Create a feature branch: `git checkout -b feature/amazing-feature`
+3.  Commit changes: `git commit -m 'Add amazing feature'`
+4.  Push to branch: `git push origin feature/amazing-feature`
+5.  Open a Pull Request
 
 ## 📄 License
 

@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "bun run --watch src/main.ts",
     "start": "bun run src/main.ts",
-    "start:prod": "bun run dist/main.js",
     "build": "bun build src/main.ts --outdir ./dist --target bun",
     "test": "bun test",
     "db:init": "bun run src/scripts/initDatabase.ts",
