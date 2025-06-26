@@ -1,5 +1,5 @@
 {
-  "name": "relayer-db-server",
+  "name": "polymer-relayer-ui-server",
   "version": "1.0.0",
   "type": "module",
   "scripts": {

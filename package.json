@@ -1,32 +1,29 @@
 {
-  "name": "relayer-database-ui",
+  "name": "polymer-simple-relayer-backend",
   "version": "1.0.0",
-  "description": "Web UI for Polymer Relayer SQLite Database",
+  "description": "A robust TypeScript/Bun backend relayer for cross-chain operations",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "bun --watch src/main.ts",
+    "start": "bun src/main.ts",
+    "build": "bun build src/main.ts --outdir dist --target bun",
+    "start:prod": "bun dist/main.js",
+    "db:init": "bun src/scripts/initDatabase.ts",
+    "db:view": "echo 'SELECT * FROM jobs ORDER BY created_at DESC LIMIT 10;' | sqlite3 relayer.db",
+    "db:clear": "echo 'DELETE FROM jobs; DELETE FROM chain_state;' | sqlite3 relayer.db",
+    "test": "bun test",
+    "test:config": "bun test-config.js"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "lucide-react": "^0.263.1",
-    "better-sqlite3": "^9.2.2",
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "axios": "^1.6.0",
+    "ethers": "^6.8.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
-    "@types/better-sqlite3": "^7.6.8",
-    "@types/express": "^4.17.21",
-    "@types/cors": "^2.8.17",
-    "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.0.8",
-    "typescript": "^5.2.2",
-    "tailwindcss": "^3.4.0",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32"
+    "@types/node": "^20.0.0",
+    "bun-types": "latest",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }

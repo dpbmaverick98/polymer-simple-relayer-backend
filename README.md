@@ -29,6 +29,7 @@ Under the hood, the relayer operates as a stateful, service-oriented application
 - **Dynamic Destination Resolvers**: Sophisticated logic to determine where to send transactions based on event data.
 - **Type-Safe & Modern**: Built with TypeScript and Bun for performance and developer experience.
 - **Metrics & Logging**: Built-in, configurable logging and performance metrics.
+- **Optional Web UI**: Includes a modern React-based dashboard for monitoring relayer activity.
 
 ## 📦 Installation
 
@@ -43,6 +44,29 @@ bun run dev
 bun run build
 bun run start
 ```
+
+## 🖥️ Web UI (Optional)
+
+The relayer includes an optional web-based dashboard for monitoring and managing the database:
+
+```bash
+# Navigate to the UI directory
+cd ui
+
+# Install UI dependencies
+npm run install-all
+
+# Start the web interface
+npm run dev
+```
+
+The UI will be available at `http://localhost:3000` and provides:
+- Real-time job monitoring and filtering
+- Chain state visualization
+- Statistics and metrics dashboard
+- Detailed job inspection
+
+For more details, see [ui/README.md](ui/README.md).
 
 ## 🐳 Running with Docker
 
@@ -270,6 +294,11 @@ src/
 ├── types/            # TypeScript type definitions
 ├── utils/            # Utilities (logger, metrics, config loader)
 └── main.ts           # Application entry point (RelayerApp)
+
+ui/                   # Optional web interface
+├── src/              # React frontend
+├── server/           # Express API server
+└── README.md         # UI documentation
 ```
 
 ### Adding New Chains or Contracts
@@ -318,9 +347,9 @@ The relayer includes robust error handling:
 - Add multi-threaded wallet support with circuit breaker pattern for stuck transactions
 
 ### 2. Monitoring & Operations
-- Build web UI dashboard displaying job status, transaction hashes, retry counts, and mapping details
-- Enhanced logging system it sucks rn - kek
-  
+- Enhanced logging system
+- Metrics export for Prometheus/Grafana
+- Health check endpoints
 
 ## 📄 License
 
@@ -331,4 +360,4 @@ This project is licensed under the MIT License.
 For questions and support:
 - Create an issue on GitHub
 - Join our Discord community
-- Read the documentation at [docs.polymerlabs.org](https://docs.polymerlabs.org) 
+- Read the documentation at [docs.polymerlabs.org](https://docs.polymerlabs.org)
