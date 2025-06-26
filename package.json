@@ -1,31 +1,32 @@
 {
-  "name": "polymer-simple-relayer-backend",
+  "name": "relayer-database-ui",
   "version": "1.0.0",
-  "description": "A TypeScript/Bun backend relayer for cross-chain operations",
-  "main": "src/main.ts",
+  "description": "Web UI for Polymer Relayer SQLite Database",
+  "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/main.ts",
-    "start": "bun run src/main.ts",
-    "start:prod": "bun run dist/main.js",
-    "build": "bun build src/main.ts --outdir ./dist --target bun",
-    "test": "bun test",
-    "db:init": "bun run src/scripts/initDatabase.ts",
-    "db:clear": "rm -f relayer.db && echo 'Database cleared'",
-    "db:view": "sqlite3 -header -column relayer.db \"select id, status, source_chain, dest_chain, source_tx_hash, dest_tx_hash, retry_count, mapping_name, (strftime('%s', completed_at) - strftime('%s', created_at)) as 'time_taken_s' from jobs;\""
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": ["relayer", "blockchain", "cross-chain", "typescript", "bun"],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
-    "ethers": "^6.8.0",
-    "axios": "^1.6.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "lucide-react": "^0.263.1",
+    "better-sqlite3": "^9.2.2",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "bun-types": "latest",
-    "typescript": "^5.0.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/better-sqlite3": "^7.6.8",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8",
+    "typescript": "^5.2.2",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
   }
-} 
+}
